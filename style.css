@@ -121,7 +121,7 @@ body {
     position: absolute;
     top: 150px;
     left: 0;
-    background-image: url(./img/wd1.svg);
+    background-image: url(wd1.svg);
     background-position: bottom;
 }
 
