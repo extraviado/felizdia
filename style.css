@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: -webkit-radial-gradient(#560e86, #0a0011);
+}
+.container span{
+    font-size: 120pt;
+    font-weight: bold;
+    position: relative;
+    font-family: "Fredoka One";
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.container span::before {
+    content: var(--l);
+    position: absolute;
+    transform: scale(1.1);
+    filter: blur(15px);
+}
+.container span::after {
+    content: var(--l);
+    position: absolute;
+    top: 80%;
+    left: 0;
+    filter: blur(30px);
+    transform: rotateX(50deg);
+}
+.container span:hover {
+    filter: contrast(250%);
+}
+.container span:nth-child(1){
+    color: #c501e2;
+}
+.container span:nth-child(2){
+    color: #2ef8a0;
+}
+.container span:nth-child(3){
+    color: #ff0534;
+}
+.container span:nth-child(4){
+    color: #f82d97;
+}
+.container span:nth-child(5){
+    color: #01c4e7;
+}
+.container span:nth-child(6){
+    color: #9a27f7;
+}
+.container span:nth-child(7){
+    color: #5ec1d3;
+}
+.container span:nth-child(8){
+    color: #f82d97;
+}
+.container span:nth-child(9){
+    color: #c2ff05;
+}
+.container span:nth-child(10){
+    color: #ff0534;
+}
+.container span:nth-child(11){
+    color: #2ef8a0;
+}
+.container span:nth-child(12){
+    color: #f82d97;
+}
+.menu{
+	list-style: none;
+	padding: 0;
+	background: #2ef8a0;
+	width: 90%;
+	max-width: 70px;
+	margin: auto;
+    border-radius: 20%;
+    position: relative;
+    top: 150px;
+    bottom: 0;
+    right: 0;
+    left: 0px;
+    box-shadow: -5px -5px 10px 1px #2ef8a0;
+}
+
+.menu li a{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	padding: 20px;
+	display: block;
+}
+
+.menu li{
+	display: inline-block;
+	text-align: center;
+}
+
+.menu li a:hover{
+	background: #9a27f7;
+    border-radius: 20%;
+    box-shadow: -5px -5px 10px 1px #9a27f7;
+}
+
+.bg_color{
+    width: 100%;
+    height: 70%;
+    background: #2196f3;
+    position: absolute;
+    top: 0;
+}
+
+.wave{
+    width: 120000px;
+    height: 100%;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    background-image: url(./img/wd1.svg);
+    background-position: bottom;
+}
+
+.w1{
+    animation: w1 7s linear infinite;
+}
+
+.w2{
+    animation: w2 7s linear -.125s infinite, desplazamineto 7s ease -.125s infinite;
+    opacity: 0.5;
+}
+
+@keyframes w1{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -1600px;
+    }
+}
+
+@keyframes w2{
+    0%{
+        margin-left: 0;
+    }
+    100%{
+        margin-left: -1600px;
+    }
+}
+
+@keyframes desplazamiento{
+    0%, 100%{
+        transform: translateY(-25px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+}
+
+.carrousel{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 150px;
+}
+
+.conteCarrousel{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.itemCarrousel{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselTarjeta{
+    width: 100%;
+    height: 100%;
+}
+
+.itemCarrouselArrows{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px; 
+}
+
+.itemCarrouselArrows > i:hover {
+    cursor: pointer;
+}
+
+#itemCarrousel-1{
+    background-color: transparent;
+}
+
+#itemCarrousel-2{
+    background-color: transparent;
+}
+
+#itemCarrousel-3{
+    background-color: transparent;
+}
+
+.conteCarrouselController{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.conteCarrouselController > a{
+    text-decoration: none;
+    font-size: 3em;
+    color: rgb(199, 33, 177);
+}
+
+.itemCarrouselArrows > a > i{
+    color: rgb(255, 255, 255);
+}
+
+#img1{
+    height: 200px;
+    grid-column-start: 2;
+}
+
+#img2{
+    height: 200px;
+    grid-column-start: 3;
+}
+
+#img3{
+    height: 200px;  
+    grid-column-start: 3; 
+}
+
+#img_1{
+    display: grid;
+    grid-template-columns:33% 33% 33%;
+}
+
+#img_2{
+    display: grid;
+    grid-template-columns:20% 20% 20% 20% 20%;
+}
+
+#img_3{
+    display: grid;
+    grid-template-columns:20% 20% 20% 20% 20%;
+}
+.atras{
+	list-style: none;
+	padding: 0;
+	background: #2ef8a0;
+	width: 90%;
+	max-width: 70px;
+	margin: auto;
+    border-radius: 20%;
+    position: relative;
+    top: 450px;
+    bottom: 0;
+    right: 500px;
+    left: 0;
+    box-shadow: -5px -5px 10px 1px #2ef8a0;
+}
+
+.atras li a{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	padding: 20px;
+	display: block;
+}
+
+.atras li{
+	display: inline-block;
+	text-align: center;
+}
+
+.atras li a:hover{
+	background: #9a27f7;
+    border-radius: 20%;
+    box-shadow: -5px -5px 10px 1px #9a27f7;
+}
